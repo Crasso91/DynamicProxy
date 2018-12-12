@@ -1,0 +1,67 @@
+{
+  "ConfigName": "BaseProxy.json",
+  "MaxRetry": 5,
+  "RetryDelay": 1,
+  "WSAssemblies": [
+    "D:\\Progetti\\DynamicProxy\\TestApplication\\bin\\Debug\\MWSOrders_2013-09-01_v2018-01-31.dll",
+    "D:\\Progetti\\DynamicProxy\\TestApplication\\bin\\Debug\\MWSInbound_2010-10-01_v2016-10-05.dll"
+  ],
+  "WSClients": [
+    {
+      "Name": "MarketplaceWebServiceOrdersClient",
+      "ConstructorParameters": [
+        {
+          "Type": "string",
+          "Value": ""
+        },
+        {
+          "Type": "string",
+          "Value": ""
+        },
+        {
+          "Type": "string",
+          "Value": ""
+        },
+        {
+          "Type": "string",
+          "Value": ""
+        },
+        {
+          "Type": "",
+          "Value": {
+            "ServiceUrl": "https://mws-eu.amazonservices.com",
+            "MaxErrorRetry" :  1
+          }
+        }
+      ]
+    },
+    {
+      "Name": "FBAInboundServiceMWSClient",
+      "ConstructorParameters": [
+        {
+          "Type": "string",
+          "Value": ""
+        },
+        {
+          "Type": "string",
+          "Value": ""
+        },
+        {
+          "Type": "string",
+          "Value": ""
+        },
+        {
+          "Type": "string",
+          "Value": ""
+        },
+        {
+          "Type": "FBAInboundServiceMWSConfig",
+          "Value": {
+            "ServiceUrl": "https://mws-eu.amazonservices.com",
+            "MaxErrorRetry": 1
+          }
+        }
+      ]
+    }
+  ]
+}
